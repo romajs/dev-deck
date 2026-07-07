@@ -51,6 +51,8 @@ Scripts/package-release.sh local
 
 ## Release Automation
 
+Current behavior:
+
 - Pull requests run the `CI` workflow.
 - Pushes to `main` run `CI`.
 - When `CI` succeeds on `main`, the `Release` workflow creates a tag automatically and publishes a GitHub Release.
@@ -58,6 +60,13 @@ Scripts/package-release.sh local
 - Release app bundles are universal (`arm64` and `x86_64`) and ad-hoc signed.
 - Releases are not notarized yet. Users may see standard macOS Gatekeeper warnings until Developer ID signing/notarization is added.
 - The `Release` workflow can also be run manually from GitHub Actions.
+
+Planned behavior:
+
+- Keep `CI` on pull requests and pushes to `main`.
+- Publish GitHub Releases only from explicit version tags such as `v0.2.0`.
+- Stop creating public releases for every merge to `main`.
+- Keep Developer ID signing/notarization optional unless a maintainer chooses to pay for Apple Developer Program access.
 
 ## UX Notes
 

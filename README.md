@@ -51,8 +51,11 @@ Scripts/package-release.sh local
 
 Merges to `main` run CI and, after CI passes, automatically publish a GitHub Release with a zipped universal `DevDeck.app` and SHA-256 checksum. GitHub Releases are tag-backed; the release workflow creates tags automatically, so maintainers do not need to push tags manually.
 
+The planned release model is to publish only from explicit version tags, so normal documentation or code merges do not create public releases.
+
 ## Documentation
 
+- [Project Plan](docs/PROJECT_PLAN.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Development Guide](docs/DEVELOPMENT.md)
 - [Roadmap](docs/ROADMAP.md)

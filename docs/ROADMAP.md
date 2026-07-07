@@ -22,11 +22,12 @@ This roadmap captures current direction. It is not a release commitment.
 
 ## Near-Term Backlog
 
+- Switch release publishing from every `main` merge to explicit version tags.
+- Add screenshots or a short GIF to the README.
+- Add GitHub issue and pull request templates.
 - Improve settings layout for large runtime lists.
 - Add tests for `lsof`, `ps`, manifest parsing, and detector heuristics.
 - Add sample parser fixtures with synthetic data only.
-- Add Developer ID signing and notarization for release builds.
-- Add a clearer versioning strategy for automated releases.
 - Improve project name detection for non-Node manifests.
 - Improve runtime-specific port defaults.
 - Design optional port conflict detection.
@@ -43,6 +44,7 @@ This roadmap captures current direction. It is not a release commitment.
 
 ## Larger Ideas
 
+- Developer ID signing and notarization if a maintainer later chooses to pay for Apple Developer Program access or a sponsor covers it.
 - Notifications when a new dev server starts.
 - Notifications when a conflict appears.
 - Workspace grouping.
