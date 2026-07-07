@@ -19,10 +19,10 @@ This roadmap captures current direction. It is not a release commitment.
 - Window size/position persistence.
 - False-positive reduction for common macOS support folders.
 - Configurable ignored process/path filters.
+- Release publishing from explicit version tags.
 
 ## Near-Term Backlog
 
-- Switch release publishing from every `main` merge to explicit version tags.
 - Add screenshots or a short GIF to the README.
 - Add GitHub issue and pull request templates.
 - Improve settings layout for large runtime lists.

@@ -13,9 +13,11 @@ It is intentionally lightweight:
 
 ## Status
 
-DevDeck is early-stage open source software. The current app is useful for local development visibility, but the UX and distribution story are still evolving.
+DevDeck is early-stage source-available software. The current app is useful for local development visibility, but the UX and distribution story are still evolving.
 
-GitHub Releases provide downloadable universal macOS app bundles for Apple Silicon and Intel Macs. Release bundles are ad-hoc signed but not notarized yet. There is no Homebrew cask yet.
+The source is visible for review and reference, but DevDeck is not open source under an OSI-approved license. The license does not grant permission to use, copy, modify, redistribute, commercialize, or create derivative works without written permission.
+
+GitHub Releases provide downloadable universal macOS app bundles for Apple Silicon and Intel Macs. Release bundles are ad-hoc signed but not notarized yet. There is no Homebrew cask yet. Downloadable release artifacts do not grant permission beyond the repository license.
 
 ## Features
 
@@ -49,9 +51,7 @@ Package a local release zip:
 Scripts/package-release.sh local
 ```
 
-Merges to `main` run CI and, after CI passes, automatically publish a GitHub Release with a zipped universal `DevDeck.app` and SHA-256 checksum. GitHub Releases are tag-backed; the release workflow creates tags automatically, so maintainers do not need to push tags manually.
-
-The planned release model is to publish only from explicit version tags, so normal documentation or code merges do not create public releases.
+Pull requests and pushes to `main` run CI. Public releases are published only when a version tag such as `v0.2.0` is pushed, or when the release workflow is manually run for an existing tag.
 
 ## Documentation
 
@@ -73,4 +73,4 @@ The planned release model is to publish only from explicit version tags, so norm
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Source-available, all rights reserved. See [LICENSE](LICENSE).

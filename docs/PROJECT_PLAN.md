@@ -1,6 +1,6 @@
 # Project Plan
 
-This document captures the working plan for DevDeck as an open source project. It is meant to guide maintainers, contributors, and coding agents without implying a fixed release commitment.
+This document captures the working plan for DevDeck as a public source-available project. It is meant to guide maintainers, contributors, and coding agents without implying a fixed release commitment.
 
 ## Product Direction
 
@@ -26,7 +26,7 @@ Goal: make the repository clear, safe, and presentable.
 Completed or mostly complete:
 
 - Public repository under `romajs/dev-deck`.
-- MIT license.
+- Restrictive source-available license with all rights reserved.
 - README with status, features, build instructions, and limitations.
 - Privacy and security docs.
 - Agent handoff instructions.
@@ -54,7 +54,7 @@ Current state:
 
 Near-term direction:
 
-- Switch release publishing from every `main` merge to explicit version tags.
+- Keep release publishing tied to explicit version tags.
 - Use clean semantic tags such as `v0.1.1`, `v0.2.0`, and `v1.0.0`.
 - Keep CI running on pull requests and `main` pushes.
 - Publish release artifacts only from tags.
@@ -62,7 +62,7 @@ Near-term direction:
 
 Not planned for now:
 
-- Buying an Apple Developer Program membership only for this open source project.
+- Buying an Apple Developer Program membership only for this source-available project.
 - Requiring Developer ID signing or notarization before the project is useful.
 
 Optional future distribution:
@@ -97,7 +97,7 @@ Performance guardrails:
 - Keep expensive metadata cached.
 - Keep refresh paused when no surface is visible.
 
-## Phase 4: Open Source Quality
+## Phase 4: Public Project Quality
 
 Goal: make contribution safe and practical.
 
@@ -125,6 +125,7 @@ Contribution standards:
 - Do not commit private paths, private repo URLs, branch names, customer names, screenshots with personal data, tokens, or secrets.
 - Add tests when changing parsing, detection, filtering, or settings persistence.
 - Document new runtime support in the architecture and development guide.
+- Remember that source visibility does not grant third parties permission to use, copy, modify, distribute, commercialize, or create derivatives without written permission.
 
 ## Phase 5: Outreach
 
@@ -166,13 +167,13 @@ Preferred future cycle:
 9. Publish release notes.
 10. Update roadmap and docs if product behavior changed.
 
-This is preferred over publishing a release for every merge to `main`.
+Do not publish a release for every merge to `main`.
 
 ## Practical Priority Order
 
 Recommended next work:
 
-1. Switch release publishing to explicit version tags.
+1. Keep release publishing on explicit version tags.
 2. Add screenshots or a GIF to the README.
 3. Add issue and PR templates.
 4. Add parser/detector tests with synthetic fixtures.

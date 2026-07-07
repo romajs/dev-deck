@@ -4,6 +4,10 @@ Thanks for considering a contribution.
 
 DevDeck is early-stage. Small, focused changes are preferred.
 
+## License Note
+
+DevDeck is source-available, not open source under an OSI-approved license. The public repository does not grant permission to use, copy, modify, distribute, commercialize, or create derivative works without written permission. By submitting a contribution, you agree that it may be included in DevDeck under the repository license.
+
 ## Before Opening a PR
 
 - Keep the app native Swift/SwiftUI.

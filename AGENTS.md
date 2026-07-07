@@ -57,7 +57,7 @@ Before adding any new detection feature, ask whether it can be implemented by re
 
 - Port conflict detection is not active. Do not reintroduce it without clarifying the UX and performance cost.
 - Port suggestion/restart command generation is not active. Do not add it back unless DevDeck's project-mutation/restart behavior is defined.
-- Release publishing should move to explicit version tags instead of every `main` merge.
+- Release publishing uses explicit version tags instead of every `main` merge.
 - Developer ID signing/notarization is optional future work, not a current requirement.
 
 ## Public Repository Hygiene
