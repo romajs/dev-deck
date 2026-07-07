@@ -55,7 +55,8 @@ Scripts/package-release.sh local
 - Pushes to `main` run `CI`.
 - When `CI` succeeds on `main`, the `Release` workflow creates a tag automatically and publishes a GitHub Release.
 - Release assets include `DevDeck-<tag>.zip` and `DevDeck-<tag>.zip.sha256`.
-- Releases are currently unsigned and not notarized. Users may see standard macOS Gatekeeper warnings until signing/notarization is added.
+- Release app bundles are universal (`arm64` and `x86_64`) and ad-hoc signed.
+- Releases are not notarized yet. Users may see standard macOS Gatekeeper warnings until Developer ID signing/notarization is added.
 - The `Release` workflow can also be run manually from GitHub Actions.
 
 ## UX Notes

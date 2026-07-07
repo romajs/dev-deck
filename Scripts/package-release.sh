@@ -13,6 +13,9 @@ fi
 
 "$ROOT_DIR/Scripts/build-app.sh"
 
+lipo "$APP_DIR/Contents/MacOS/$APP_NAME" -verify_arch arm64 x86_64
+codesign --verify --deep --strict --verbose=2 "$APP_DIR"
+
 rm -rf "$DIST_DIR"
 mkdir -p "$DIST_DIR"
 

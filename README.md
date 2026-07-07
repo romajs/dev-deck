@@ -15,7 +15,7 @@ It is intentionally lightweight:
 
 DevDeck is early-stage open source software. The current app is useful for local development visibility, but the UX and distribution story are still evolving.
 
-GitHub Releases provide downloadable unsigned macOS app bundles. There is no Homebrew cask yet.
+GitHub Releases provide downloadable universal macOS app bundles for Apple Silicon and Intel Macs. Release bundles are ad-hoc signed but not notarized yet. There is no Homebrew cask yet.
 
 ## Features
 
@@ -49,7 +49,7 @@ Package a local release zip:
 Scripts/package-release.sh local
 ```
 
-Merges to `main` run CI and, after CI passes, automatically publish a GitHub Release with a zipped `DevDeck.app` and SHA-256 checksum. GitHub Releases are tag-backed; the release workflow creates tags automatically, so maintainers do not need to push tags manually.
+Merges to `main` run CI and, after CI passes, automatically publish a GitHub Release with a zipped universal `DevDeck.app` and SHA-256 checksum. GitHub Releases are tag-backed; the release workflow creates tags automatically, so maintainers do not need to push tags manually.
 
 ## Documentation
 

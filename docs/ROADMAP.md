@@ -25,7 +25,7 @@ This roadmap captures current direction. It is not a release commitment.
 - Improve settings layout for large runtime lists.
 - Add tests for `lsof`, `ps`, manifest parsing, and detector heuristics.
 - Add sample parser fixtures with synthetic data only.
-- Add signing and notarization for release builds.
+- Add Developer ID signing and notarization for release builds.
 - Add a clearer versioning strategy for automated releases.
 - Improve project name detection for non-Node manifests.
 - Improve runtime-specific port defaults.
