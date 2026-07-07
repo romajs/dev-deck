@@ -2,6 +2,12 @@
 
 This file is for LLMs and coding agents working on DevDeck.
 
+Primary planning docs:
+
+- `docs/PROJECT_PLAN.md`: project phases, distribution stance, outreach, and release-cycle direction.
+- `docs/ARCHITECTURE.md`: service boundaries, refresh lifecycle, caching, settings, and current non-goals.
+- `docs/ROADMAP.md`: current backlog and product decisions pending.
+
 ## Project Intent
 
 DevDeck is a lightweight native macOS developer utility. It should help developers see which local development servers are running, what ports they occupy, and which project/runtime each process belongs to.
@@ -51,6 +57,8 @@ Before adding any new detection feature, ask whether it can be implemented by re
 
 - Port conflict detection is not active. Do not reintroduce it without clarifying the UX and performance cost.
 - Port suggestion/restart command generation is not active. Do not add it back unless DevDeck's project-mutation/restart behavior is defined.
+- Release publishing uses explicit version tags instead of every `main` merge.
+- Developer ID signing/notarization is optional future work, not a current requirement.
 
 ## Public Repository Hygiene
 
