@@ -23,7 +23,8 @@ ZIP_PATH="$DIST_DIR/$APP_NAME-$RELEASE_NAME.zip"
 CHECKSUM_PATH="$ZIP_PATH.sha256"
 
 ditto -c -k --sequesterRsrc --keepParent "$APP_DIR" "$ZIP_PATH"
-shasum -a 256 "$ZIP_PATH" > "$CHECKSUM_PATH"
+checksum="$(shasum -a 256 "$ZIP_PATH" | awk '{print $1}')"
+printf "%s  %s\n" "$checksum" "$(basename "$ZIP_PATH")" > "$CHECKSUM_PATH"
 
 echo "Packaged $ZIP_PATH"
 echo "Checksum $CHECKSUM_PATH"
