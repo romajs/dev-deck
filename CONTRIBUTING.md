@@ -21,6 +21,12 @@ Scripts/build-app.sh
 
 `swift build` may work with a healthy SwiftPM toolchain, but the supported local verification path is the app-bundle script above.
 
+Release packaging can be tested locally:
+
+```sh
+Scripts/package-release.sh local
+```
+
 ## Sensitive Data Check
 
 Before publishing:
