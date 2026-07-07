@@ -32,4 +32,7 @@ jobs:
           codesign --verify --deep --strict --verbose=2 .build/DevDeck.app
 
       - name: Package release artifact
-        run: Scripts/package-release.sh ci
+        run: |
+          Scripts/package-release.sh ci
+          cd dist
+          shasum -a 256 -c DevDeck-ci.zip.sha256
