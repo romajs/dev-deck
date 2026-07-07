@@ -25,5 +25,11 @@ jobs:
           plutil -lint DevDeck/App/Info.plist
           plutil -lint .build/DevDeck.app/Contents/Info.plist
 
+      - name: Validate universal signed app
+        run: |
+          lipo .build/DevDeck.app/Contents/MacOS/DevDeck -verify_arch arm64 x86_64
+          lipo -info .build/DevDeck.app/Contents/MacOS/DevDeck
+          codesign --verify --deep --strict --verbose=2 .build/DevDeck.app
+
       - name: Package release artifact
         run: Scripts/package-release.sh ci
