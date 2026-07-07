@@ -70,5 +70,5 @@ jobs:
               "dist/DevDeck-$tag.zip.sha256" \
               --target "${{ steps.metadata.outputs.target_sha }}" \
               --title "DevDeck $tag" \
-              --notes "Automated unsigned macOS app bundle build for $tag."
+              --notes "Automated universal ad-hoc signed macOS app bundle build for $tag. This build is not notarized yet."
           fi

@@ -23,6 +23,6 @@ For now, report security issues through GitHub issues if the repository is publi
 - Shell command parsing and timeout behavior.
 - Process kill confirmation flows.
 - Git metadata display of private remote URLs.
-- Unsigned, non-notarized release artifacts.
+- Ad-hoc signed but non-notarized release artifacts.
 - Any future restart/edit-project behavior.
 - Any future network/update mechanism.
