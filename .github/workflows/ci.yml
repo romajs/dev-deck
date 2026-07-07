@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build app bundle
+    runs-on: macos-14
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build app
+        run: Scripts/build-app.sh
+
+      - name: Validate app metadata
+        run: |
+          plutil -lint DevDeck/App/Info.plist
+          plutil -lint .build/DevDeck.app/Contents/Info.plist
+
+      - name: Package release artifact
+        run: Scripts/package-release.sh ci

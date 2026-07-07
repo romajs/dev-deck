@@ -43,6 +43,21 @@ Then build the app bundle:
 Scripts/build-app.sh
 ```
 
+Package the app for local release testing:
+
+```sh
+Scripts/package-release.sh local
+```
+
+## Release Automation
+
+- Pull requests run the `CI` workflow.
+- Pushes to `main` run `CI`.
+- When `CI` succeeds on `main`, the `Release` workflow creates a tag automatically and publishes a GitHub Release.
+- Release assets include `DevDeck-<tag>.zip` and `DevDeck-<tag>.zip.sha256`.
+- Releases are currently unsigned and not notarized. Users may see standard macOS Gatekeeper warnings until signing/notarization is added.
+- The `Release` workflow can also be run manually from GitHub Actions.
+
 ## UX Notes
 
 - The window layout is the primary development surface.
